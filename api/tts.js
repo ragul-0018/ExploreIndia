@@ -2,7 +2,9 @@ const GEMINI_TTS_MODEL = "gemini-2.5-flash-preview-tts";
 
 const getServerApiKey = () =>
   process.env.GEMINI_API_KEY ||
+  process.env.API_KEY ||
   process.env.GOOGLE_API_KEY ||
+  process.env.GOOGLE_GENERATIVE_AI_API_KEY ||
   process.env.VITE_GEMINI_API_KEY;
 
 export default async function handler(req, res) {
