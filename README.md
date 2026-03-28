@@ -1,5 +1,5 @@
 <div align="center">
-Explore360 AI Chatbot 
+Explore360 AI Chatbot
 
 **An intelligent, multilingual AI-powered travel assistant for exploring India.**
 
@@ -18,7 +18,6 @@ Explore360 AI Chatbot
   
 ![Chatbot Demo GIF](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2pxbGI1cTQ3cWo0cDZrZ2kyY3R1MzZqejBxbDlsdmZ2OHZyOXR6eiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/S60CrN9iMxFlyp7uM8/giphy.gif)
 
-
 </div>
 
 ### **Introduction**
@@ -29,30 +28,30 @@ The India Tourism AI Chatbot is an interactive and user-friendly travel guide de
 
 ### **✨ Key Features**
 
-* **🤖 Conversational AI:** Natural and context-aware travel advice powered by the **Google Gemini API**.
-* **🌐 Multilingual Support:** Communicates fluently in **7+ Indian languages**, with an easy-to-use language switcher.
-* **🗺️ Dynamic Trip Planning:** Generates detailed day-by-day itineraries in a clean table format on request.
-* **📍 Hyperlocal Search:** Finds nearby points of interest using the **OpenStreetMap API**, including:
-    * Tourist Attractions
-    * Hotels & Lodging
-    * Restaurants (with **vegetarian/non-vegetarian** filtering)
-    * Bus Stands & Railway Stations
-    * Medical Shops
-* **🔊 Voice I/O:** Features **Text-to-Speech** (TTS) for reading out responses and **Speech-to-Text** (STT) for voice commands.
-* **🔗 Interactive Map Links:** Each location result includes a direct, coordinate-based link to **Google Maps** for pinpoint accuracy.
-* **🎨 Modern UI:** A sleek and responsive interface built with **Tailwind CSS**, featuring quick replies and a floating action button.
+- **🤖 Conversational AI:** Natural and context-aware travel advice powered by the **Google Gemini API**.
+- **🌐 Multilingual Support:** Communicates fluently in **7+ Indian languages**, with an easy-to-use language switcher.
+- **🗺️ Dynamic Trip Planning:** Generates detailed day-by-day itineraries in a clean table format on request.
+- **📍 Hyperlocal Search:** Finds nearby points of interest using the **OpenStreetMap API**, including:
+  - Tourist Attractions
+  - Hotels & Lodging
+  - Restaurants (with **vegetarian/non-vegetarian** filtering)
+  - Bus Stands & Railway Stations
+  - Medical Shops
+- **🔊 Voice I/O:** Features **Text-to-Speech** (TTS) for reading out responses and **Speech-to-Text** (STT) for voice commands.
+- **🔗 Interactive Map Links:** Each location result includes a direct, coordinate-based link to **Google Maps** for pinpoint accuracy.
+- **🎨 Modern UI:** A sleek and responsive interface built with **Tailwind CSS**, featuring quick replies and a floating action button.
 
 ---
 
 ### **🛠️ Tech Stack**
 
-| Technology        | Description                               |
-| ----------------- | ----------------------------------------- |
-| **React.js** | A JavaScript library for building user interfaces.     |
-| **Tailwind CSS** | A utility-first CSS framework for rapid UI development. |
-| **Google Gemini** | The core AI model for chat and text-to-speech (TTS).  |
-| **OpenStreetMap** | Used via the Overpass API for fetching geolocation data. |
-| **Web Speech API**| Enables voice recognition for hands-free interaction. |
+| Technology         | Description                                              |
+| ------------------ | -------------------------------------------------------- |
+| **React.js**       | A JavaScript library for building user interfaces.       |
+| **Tailwind CSS**   | A utility-first CSS framework for rapid UI development.  |
+| **Google Gemini**  | The core AI model for chat and text-to-speech (TTS).     |
+| **OpenStreetMap**  | Used via the Overpass API for fetching geolocation data. |
+| **Web Speech API** | Enables voice recognition for hands-free interaction.    |
 
 ---
 
@@ -61,23 +60,28 @@ The India Tourism AI Chatbot is an interactive and user-friendly travel guide de
 Follow these instructions to set up the project on your local machine.
 
 1.  **Clone the Repository**
+
     ```sh
     git clone (https://github.com/your-username/india-tourism-chatbot.git)
     cd india-tourism-chatbot
     ```
 
 2.  **Install Dependencies**
+
     ```sh
     npm install
     ```
 
 3.  **Set Up Environment Variables**
-    * Create a file named `.env` in the root of your project.
-    * Get your API key from [Google AI Studio](https://makersuite.google.com/).
-    * Add your API key to the `.env` file:
-        ```env
-        VITE_GEMINI_API_KEY=YOUR_API_KEY_HERE
-        ```
+    - Create a file named `.env` in the root of your project.
+    - Get your API key from [Google AI Studio](https://makersuite.google.com/).
+    - Add your API key to the `.env` file:
+      ```env
+      GEMINI_API_KEY=YOUR_API_KEY_HERE
+      VITE_GEMINI_API_KEY=YOUR_API_KEY_HERE
+      ```
+
+    For Vercel deployments, add `GEMINI_API_KEY` in the project Environment Variables.
 
 4.  **Run the Application**
     ```sh
