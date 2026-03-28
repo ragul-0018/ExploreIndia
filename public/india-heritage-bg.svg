@@ -1,0 +1,56 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF7EC"/>
+      <stop offset="100%" stop-color="#EAF4FF"/>
+    </linearGradient>
+    <linearGradient id="dune" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFD7A8"/>
+      <stop offset="100%" stop-color="#FFE9CC"/>
+    </linearGradient>
+    <linearGradient id="greenHills" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B5E2C0"/>
+      <stop offset="100%" stop-color="#D8F2DE"/>
+    </linearGradient>
+    <linearGradient id="river" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#CFE8FF"/>
+      <stop offset="100%" stop-color="#E9F5FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+
+  <circle cx="220" cy="170" r="68" fill="#FFB45C" fill-opacity="0.55"/>
+  <circle cx="220" cy="170" r="40" fill="#FFD89D" fill-opacity="0.8"/>
+
+  <path d="M0 725C170 670 300 670 470 725C610 770 760 770 920 725C1100 675 1240 675 1600 755V1000H0V725Z" fill="url(#dune)"/>
+  <path d="M0 790C180 730 350 760 530 830C680 888 850 892 1030 830C1210 768 1380 750 1600 808V1000H0V790Z" fill="url(#greenHills)"/>
+  <path d="M0 860C250 830 420 870 610 920C790 967 980 965 1160 920C1330 878 1465 855 1600 872V1000H0V860Z" fill="url(#river)"/>
+
+  <g transform="translate(800 585)">
+    <rect x="-220" y="120" width="440" height="16" rx="8" fill="#0F4C81" fill-opacity="0.14"/>
+    <rect x="-200" y="96" width="400" height="28" rx="8" fill="#F5F6F8" stroke="#B8C1CC" stroke-width="2"/>
+
+    <path d="M-120 94V8H120V94" fill="#FBFCFE" stroke="#9AA6B2" stroke-width="3"/>
+    <rect x="-18" y="-54" width="36" height="62" rx="18" fill="#FBFCFE" stroke="#9AA6B2" stroke-width="3"/>
+    <path d="M-70 8A70 70 0 0 1 70 8" stroke="#9AA6B2" stroke-width="3" fill="#FBFCFE"/>
+
+    <rect x="-200" y="24" width="50" height="72" fill="#FBFCFE" stroke="#9AA6B2" stroke-width="3"/>
+    <rect x="150" y="24" width="50" height="72" fill="#FBFCFE" stroke="#9AA6B2" stroke-width="3"/>
+
+    <line x1="-44" y1="36" x2="44" y2="36" stroke="#9AA6B2" stroke-width="2"/>
+    <line x1="-44" y1="58" x2="44" y2="58" stroke="#9AA6B2" stroke-width="2"/>
+    <line x1="-44" y1="80" x2="44" y2="80" stroke="#9AA6B2" stroke-width="2"/>
+  </g>
+
+  <g opacity="0.36">
+    <path d="M1180 230L1250 120L1320 230H1180Z" fill="#93B8D8"/>
+    <path d="M1260 260L1330 150L1400 260H1260Z" fill="#A7C7E3"/>
+  </g>
+
+  <g opacity="0.12">
+    <circle cx="1120" cy="180" r="58" stroke="#0F4C81" stroke-width="3"/>
+    <circle cx="1120" cy="180" r="39" stroke="#0F4C81" stroke-width="2"/>
+    <path d="M1120 122V238M1062 180H1178M1080 140L1160 220M1160 140L1080 220" stroke="#0F4C81" stroke-width="1.4"/>
+  </g>
+</svg>

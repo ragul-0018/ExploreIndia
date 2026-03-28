@@ -76,14 +76,14 @@ Follow these instructions to set up the project on your local machine.
     * Get your API key from [Google AI Studio](https://makersuite.google.com/).
     * Add your API key to the `.env` file:
         ```env
-        REACT_APP_GEMINI_API_KEY=YOUR_API_KEY_HERE
+        VITE_GEMINI_API_KEY=YOUR_API_KEY_HERE
         ```
 
 4.  **Run the Application**
     ```sh
-    npm start
+    npm run dev
     ```
-    Navigate to `http://localhost:3000` in your browser.
+    Navigate to `http://localhost:5173` in your browser.
 
 ---
 
