@@ -4,10 +4,10 @@
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const GEMINI_API_URL = API_KEY
   ? `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${encodeURIComponent(API_KEY)}`
-  : "";
+  : "/api/gemini";
 const GEMINI_TTS_API_URL = API_KEY
   ? `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${encodeURIComponent(API_KEY)}`
-  : "";
+  : "/api/tts";
 
 const MAX_USER_INPUT_LENGTH = 700;
 const MAX_TEXT_FIELD_LENGTH = 500;
@@ -905,18 +905,6 @@ const IndiaTourismChatbot = () => {
     setSpeakingMessageId(messageId);
     setIsTtsLoading(true);
 
-    if (!API_KEY) {
-      const fallbackStarted = speakWithBrowserFallback();
-      if (!fallbackStarted) {
-        setSpeakingMessageId(null);
-        setIsTtsLoading(false);
-        setTtsErrorMessage(
-          "TTS unavailable: add VITE_GEMINI_API_KEY or use a browser with speech synthesis support.",
-        );
-      }
-      return;
-    }
-
     const payload = {
       contents: [
         {
@@ -1085,19 +1073,6 @@ const IndiaTourismChatbot = () => {
 
   const sendMessageToGemini = async (userMessage) => {
     setIsLoading(true);
-
-    if (!API_KEY) {
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        {
-          role: "bot",
-          content: "Missing API key. Add VITE_GEMINI_API_KEY in .env.",
-          id: `bot-${Date.now()}`,
-        },
-      ]);
-      setIsLoading(false);
-      return;
-    }
 
     const systemPrompt = `${translations[language].systemPrompt}\n\n${SECURITY_GUARDRAILS_PROMPT}`;
 
