@@ -1,0 +1,17 @@
+{
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/gemini",
+      "destination": "/api/gemini.js"
+    },
+    {
+      "source": "/api/tts",
+      "destination": "/api/tts.js"
+    }
+  ]
+}

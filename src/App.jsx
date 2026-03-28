@@ -794,9 +794,21 @@ const IndiaTourismChatbot = () => {
     maxRetries = 20,
     initialDelay = 5000,
   ) => {
+    let currentUrl = url;
     for (let i = 0; i < maxRetries; i++) {
       try {
-        const response = await fetch(url, options);
+        const response = await fetch(currentUrl, options);
+
+        if (
+          response.status === 404 &&
+          typeof currentUrl === "string" &&
+          currentUrl.startsWith("/api/") &&
+          !currentUrl.endsWith(".js")
+        ) {
+          currentUrl = `${currentUrl}.js`;
+          continue;
+        }
+
         if (response.status !== 429) {
           return response;
         }
